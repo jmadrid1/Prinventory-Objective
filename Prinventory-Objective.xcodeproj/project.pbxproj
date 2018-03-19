@@ -7,25 +7,79 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E2841E32051467800A178FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E2841E22051467800A178FD /* Main.storyboard */; };
+		2E2AB8B92052685400C27384 /* PrinterUpdateVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E649E5C204F5EE20067F3D9 /* PrinterUpdateVC.m */; };
+		2E2AB8BC2052F96000C27384 /* Printer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E2AB8BB2052F96000C27384 /* Printer.m */; };
+		2E4B6629205115950029E9EE /* PrinterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E4B6628205115950029E9EE /* PrinterVC.m */; };
 		2E649E26204F21E80067F3D9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E649E25204F21E80067F3D9 /* AppDelegate.m */; };
-		2E649E29204F21E80067F3D9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E649E28204F21E80067F3D9 /* ViewController.m */; };
-		2E649E2C204F21E80067F3D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E649E2A204F21E80067F3D9 /* Main.storyboard */; };
 		2E649E2E204F21E80067F3D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E649E2D204F21E80067F3D9 /* Assets.xcassets */; };
 		2E649E31204F21E80067F3D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E649E2F204F21E80067F3D9 /* LaunchScreen.storyboard */; };
 		2E649E34204F21E80067F3D9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E649E33204F21E80067F3D9 /* main.m */; };
+		2E649E41204F4D1A0067F3D9 /* PrinterTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E649E40204F4D1A0067F3D9 /* PrinterTableCell.m */; };
+		2E649E44204F51A20067F3D9 /* TonerTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E649E43204F51A20067F3D9 /* TonerTableCell.m */; };
+		2E649E47204F54120067F3D9 /* VendorTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E649E46204F54120067F3D9 /* VendorTableCell.m */; };
+		2E649E4B204F57220067F3D9 /* TonerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E649E4A204F57220067F3D9 /* TonerVC.m */; };
+		2E649E4E204F57450067F3D9 /* VendorVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E649E4D204F57450067F3D9 /* VendorVC.m */; };
+		2E649E51204F591C0067F3D9 /* Toner.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E649E50204F591C0067F3D9 /* Toner.m */; };
+		2E649E54204F59580067F3D9 /* Vendor.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E649E53204F59580067F3D9 /* Vendor.m */; };
+		2E649E57204F5DF80067F3D9 /* PrinterDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E649E56204F5DF80067F3D9 /* PrinterDetailVC.m */; };
+		2E649E5A204F5E930067F3D9 /* PrinterAddVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E649E59204F5E930067F3D9 /* PrinterAddVC.m */; };
+		2E649E60204F691B0067F3D9 /* TonerDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E649E5F204F691B0067F3D9 /* TonerDetailVC.m */; };
+		2E649E63204F6A300067F3D9 /* VendorDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E649E62204F6A300067F3D9 /* VendorDetailVC.m */; };
+		2E649E66204F6EB40067F3D9 /* TonerAddVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E649E65204F6EB40067F3D9 /* TonerAddVC.m */; };
+		2E649E69204F6FF40067F3D9 /* TonerUpdateVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E649E68204F6FF40067F3D9 /* TonerUpdateVC.m */; };
+		2E649E6C204F73800067F3D9 /* VendorAddVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E649E6B204F73800067F3D9 /* VendorAddVC.m */; };
+		2E649E6F204F73920067F3D9 /* VendorUpdateVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E649E6E204F73920067F3D9 /* VendorUpdateVC.m */; };
+		2EF0F49D2055AD7600BDCD32 /* Database.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EF0F49C2055AD7600BDCD32 /* Database.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2E2841E22051467800A178FD /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		2E2AB8BA2052F96000C27384 /* Printer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Printer.h; sourceTree = "<group>"; };
+		2E2AB8BB2052F96000C27384 /* Printer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Printer.m; sourceTree = "<group>"; };
+		2E4B6627205115950029E9EE /* PrinterVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrinterVC.h; sourceTree = "<group>"; };
+		2E4B6628205115950029E9EE /* PrinterVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PrinterVC.m; sourceTree = "<group>"; };
 		2E649E21204F21E80067F3D9 /* Prinventory-Objective.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Prinventory-Objective.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E649E24204F21E80067F3D9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2E649E25204F21E80067F3D9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		2E649E27204F21E80067F3D9 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		2E649E28204F21E80067F3D9 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		2E649E2B204F21E80067F3D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2E649E2D204F21E80067F3D9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2E649E30204F21E80067F3D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2E649E32204F21E80067F3D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2E649E33204F21E80067F3D9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2E649E3F204F4D1A0067F3D9 /* PrinterTableCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrinterTableCell.h; sourceTree = "<group>"; };
+		2E649E40204F4D1A0067F3D9 /* PrinterTableCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PrinterTableCell.m; sourceTree = "<group>"; };
+		2E649E42204F51A20067F3D9 /* TonerTableCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TonerTableCell.h; sourceTree = "<group>"; };
+		2E649E43204F51A20067F3D9 /* TonerTableCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TonerTableCell.m; sourceTree = "<group>"; };
+		2E649E45204F54120067F3D9 /* VendorTableCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VendorTableCell.h; sourceTree = "<group>"; };
+		2E649E46204F54120067F3D9 /* VendorTableCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VendorTableCell.m; sourceTree = "<group>"; };
+		2E649E49204F57220067F3D9 /* TonerVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TonerVC.h; sourceTree = "<group>"; };
+		2E649E4A204F57220067F3D9 /* TonerVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TonerVC.m; sourceTree = "<group>"; };
+		2E649E4C204F57450067F3D9 /* VendorVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VendorVC.h; sourceTree = "<group>"; };
+		2E649E4D204F57450067F3D9 /* VendorVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VendorVC.m; sourceTree = "<group>"; };
+		2E649E4F204F591C0067F3D9 /* Toner.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Toner.h; sourceTree = "<group>"; };
+		2E649E50204F591C0067F3D9 /* Toner.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Toner.m; sourceTree = "<group>"; };
+		2E649E52204F59580067F3D9 /* Vendor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Vendor.h; sourceTree = "<group>"; };
+		2E649E53204F59580067F3D9 /* Vendor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Vendor.m; sourceTree = "<group>"; };
+		2E649E55204F5DF80067F3D9 /* PrinterDetailVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrinterDetailVC.h; sourceTree = "<group>"; };
+		2E649E56204F5DF80067F3D9 /* PrinterDetailVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PrinterDetailVC.m; sourceTree = "<group>"; };
+		2E649E58204F5E930067F3D9 /* PrinterAddVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrinterAddVC.h; sourceTree = "<group>"; };
+		2E649E59204F5E930067F3D9 /* PrinterAddVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PrinterAddVC.m; sourceTree = "<group>"; };
+		2E649E5B204F5EE20067F3D9 /* PrinterUpdateVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrinterUpdateVC.h; sourceTree = "<group>"; };
+		2E649E5C204F5EE20067F3D9 /* PrinterUpdateVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PrinterUpdateVC.m; sourceTree = "<group>"; };
+		2E649E5E204F691B0067F3D9 /* TonerDetailVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TonerDetailVC.h; sourceTree = "<group>"; };
+		2E649E5F204F691B0067F3D9 /* TonerDetailVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TonerDetailVC.m; sourceTree = "<group>"; };
+		2E649E61204F6A300067F3D9 /* VendorDetailVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VendorDetailVC.h; sourceTree = "<group>"; };
+		2E649E62204F6A300067F3D9 /* VendorDetailVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VendorDetailVC.m; sourceTree = "<group>"; };
+		2E649E64204F6EB40067F3D9 /* TonerAddVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TonerAddVC.h; sourceTree = "<group>"; };
+		2E649E65204F6EB40067F3D9 /* TonerAddVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TonerAddVC.m; sourceTree = "<group>"; };
+		2E649E67204F6FF40067F3D9 /* TonerUpdateVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TonerUpdateVC.h; sourceTree = "<group>"; };
+		2E649E68204F6FF40067F3D9 /* TonerUpdateVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TonerUpdateVC.m; sourceTree = "<group>"; };
+		2E649E6A204F73800067F3D9 /* VendorAddVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VendorAddVC.h; sourceTree = "<group>"; };
+		2E649E6B204F73800067F3D9 /* VendorAddVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VendorAddVC.m; sourceTree = "<group>"; };
+		2E649E6D204F73920067F3D9 /* VendorUpdateVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VendorUpdateVC.h; sourceTree = "<group>"; };
+		2E649E6E204F73920067F3D9 /* VendorUpdateVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VendorUpdateVC.m; sourceTree = "<group>"; };
+		2EF0F49B2055AD7600BDCD32 /* Database.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Database.h; sourceTree = "<group>"; };
+		2EF0F49C2055AD7600BDCD32 /* Database.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Database.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,17 +112,85 @@
 		2E649E23204F21E80067F3D9 /* Prinventory-Objective */ = {
 			isa = PBXGroup;
 			children = (
+				2EF0F49A2055AD5E00BDCD32 /* database */,
+				2E649E3E204F4CE60067F3D9 /* views */,
+				2E649E48204F56FF0067F3D9 /* controllers */,
+				2E649E3A204F21FD0067F3D9 /* models */,
 				2E649E24204F21E80067F3D9 /* AppDelegate.h */,
+				2E2841E22051467800A178FD /* Main.storyboard */,
 				2E649E25204F21E80067F3D9 /* AppDelegate.m */,
-				2E649E27204F21E80067F3D9 /* ViewController.h */,
-				2E649E28204F21E80067F3D9 /* ViewController.m */,
-				2E649E2A204F21E80067F3D9 /* Main.storyboard */,
 				2E649E2D204F21E80067F3D9 /* Assets.xcassets */,
 				2E649E2F204F21E80067F3D9 /* LaunchScreen.storyboard */,
 				2E649E32204F21E80067F3D9 /* Info.plist */,
 				2E649E33204F21E80067F3D9 /* main.m */,
 			);
 			path = "Prinventory-Objective";
+			sourceTree = "<group>";
+		};
+		2E649E3A204F21FD0067F3D9 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				2E649E4F204F591C0067F3D9 /* Toner.h */,
+				2E649E50204F591C0067F3D9 /* Toner.m */,
+				2E649E52204F59580067F3D9 /* Vendor.h */,
+				2E649E53204F59580067F3D9 /* Vendor.m */,
+				2E2AB8BA2052F96000C27384 /* Printer.h */,
+				2E2AB8BB2052F96000C27384 /* Printer.m */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		2E649E3E204F4CE60067F3D9 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				2E649E3F204F4D1A0067F3D9 /* PrinterTableCell.h */,
+				2E649E40204F4D1A0067F3D9 /* PrinterTableCell.m */,
+				2E649E42204F51A20067F3D9 /* TonerTableCell.h */,
+				2E649E43204F51A20067F3D9 /* TonerTableCell.m */,
+				2E649E45204F54120067F3D9 /* VendorTableCell.h */,
+				2E649E46204F54120067F3D9 /* VendorTableCell.m */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		2E649E48204F56FF0067F3D9 /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				2E649E49204F57220067F3D9 /* TonerVC.h */,
+				2E649E4A204F57220067F3D9 /* TonerVC.m */,
+				2E649E4C204F57450067F3D9 /* VendorVC.h */,
+				2E649E4D204F57450067F3D9 /* VendorVC.m */,
+				2E649E55204F5DF80067F3D9 /* PrinterDetailVC.h */,
+				2E649E56204F5DF80067F3D9 /* PrinterDetailVC.m */,
+				2E649E58204F5E930067F3D9 /* PrinterAddVC.h */,
+				2E649E59204F5E930067F3D9 /* PrinterAddVC.m */,
+				2E649E5B204F5EE20067F3D9 /* PrinterUpdateVC.h */,
+				2E649E5C204F5EE20067F3D9 /* PrinterUpdateVC.m */,
+				2E649E5E204F691B0067F3D9 /* TonerDetailVC.h */,
+				2E649E5F204F691B0067F3D9 /* TonerDetailVC.m */,
+				2E649E61204F6A300067F3D9 /* VendorDetailVC.h */,
+				2E649E62204F6A300067F3D9 /* VendorDetailVC.m */,
+				2E649E64204F6EB40067F3D9 /* TonerAddVC.h */,
+				2E649E65204F6EB40067F3D9 /* TonerAddVC.m */,
+				2E649E67204F6FF40067F3D9 /* TonerUpdateVC.h */,
+				2E649E68204F6FF40067F3D9 /* TonerUpdateVC.m */,
+				2E649E6A204F73800067F3D9 /* VendorAddVC.h */,
+				2E649E6B204F73800067F3D9 /* VendorAddVC.m */,
+				2E649E6D204F73920067F3D9 /* VendorUpdateVC.h */,
+				2E649E6E204F73920067F3D9 /* VendorUpdateVC.m */,
+				2E4B6627205115950029E9EE /* PrinterVC.h */,
+				2E4B6628205115950029E9EE /* PrinterVC.m */,
+			);
+			path = controllers;
+			sourceTree = "<group>";
+		};
+		2EF0F49A2055AD5E00BDCD32 /* database */ = {
+			isa = PBXGroup;
+			children = (
+				2EF0F49B2055AD7600BDCD32 /* Database.h */,
+				2EF0F49C2055AD7600BDCD32 /* Database.m */,
+			);
+			path = database;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -129,9 +251,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E2841E32051467800A178FD /* Main.storyboard in Resources */,
 				2E649E31204F21E80067F3D9 /* LaunchScreen.storyboard in Resources */,
 				2E649E2E204F21E80067F3D9 /* Assets.xcassets in Resources */,
-				2E649E2C204F21E80067F3D9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,8 +264,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2E649E29204F21E80067F3D9 /* ViewController.m in Sources */,
+				2E649E6F204F73920067F3D9 /* VendorUpdateVC.m in Sources */,
+				2E649E6C204F73800067F3D9 /* VendorAddVC.m in Sources */,
+				2E649E57204F5DF80067F3D9 /* PrinterDetailVC.m in Sources */,
+				2E649E41204F4D1A0067F3D9 /* PrinterTableCell.m in Sources */,
+				2E649E54204F59580067F3D9 /* Vendor.m in Sources */,
+				2E649E4E204F57450067F3D9 /* VendorVC.m in Sources */,
+				2E649E63204F6A300067F3D9 /* VendorDetailVC.m in Sources */,
+				2E649E51204F591C0067F3D9 /* Toner.m in Sources */,
+				2E649E5A204F5E930067F3D9 /* PrinterAddVC.m in Sources */,
+				2E649E44204F51A20067F3D9 /* TonerTableCell.m in Sources */,
 				2E649E34204F21E80067F3D9 /* main.m in Sources */,
+				2E649E60204F691B0067F3D9 /* TonerDetailVC.m in Sources */,
+				2E2AB8BC2052F96000C27384 /* Printer.m in Sources */,
+				2E649E66204F6EB40067F3D9 /* TonerAddVC.m in Sources */,
+				2E649E4B204F57220067F3D9 /* TonerVC.m in Sources */,
+				2E649E47204F54120067F3D9 /* VendorTableCell.m in Sources */,
+				2EF0F49D2055AD7600BDCD32 /* Database.m in Sources */,
+				2E2AB8B92052685400C27384 /* PrinterUpdateVC.m in Sources */,
+				2E649E69204F6FF40067F3D9 /* TonerUpdateVC.m in Sources */,
+				2E4B6629205115950029E9EE /* PrinterVC.m in Sources */,
 				2E649E26204F21E80067F3D9 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -151,14 +291,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		2E649E2A204F21E80067F3D9 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2E649E2B204F21E80067F3D9 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		2E649E2F204F21E80067F3D9 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
