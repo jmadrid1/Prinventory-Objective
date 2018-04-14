@@ -4,9 +4,11 @@
 
 @interface TonerVC : UIViewController<UITableViewDataSource, UITableViewDelegate>
 
-@property (weak, nonatomic) IBOutlet UITableView *mTonerTable;
+@property (weak, nonatomic) IBOutlet UIView *mEmptyView;
 @property (weak, nonatomic) IBOutlet UIImageView *mEmptyListImage;
 @property (weak, nonatomic) IBOutlet UILabel *mEmptyListLabel;
+
+@property (weak, nonatomic) IBOutlet UITableView *mTonerTable;
 
 @property(nonatomic) NSMutableArray *mTonerList;
 

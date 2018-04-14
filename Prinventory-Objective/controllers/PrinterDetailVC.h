@@ -5,7 +5,7 @@
 
 @interface PrinterDetailVC : UIViewController
 
-@property (weak, nonatomic) IBOutlet UIImageView *nIconImage;
+@property (weak, nonatomic) IBOutlet UIImageView *mIconImage;
 @property (weak, nonatomic) IBOutlet UIImageView *mStatusImage;
 @property (weak, nonatomic) IBOutlet UIImageView *mColorImage;
 

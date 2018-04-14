@@ -13,19 +13,23 @@
     
     _mDatabase = [[Database alloc] init];
     
-    _mColorPickerOptions = [[NSArray alloc]initWithObjects: @"BW", @"Color", nil];
+    _mIconImage.image = [UIImage imageNamed: @"ic_toner.png"];
     
-    _mCyanLabel.hidden = YES;
-    _mCyanQuantityLabel.hidden = YES;
-    _mCyanStepper.hidden = YES;
+    _mMakeLabel.text = @"Make:";
+    _mModelLabel.text = @"Model";
+    _mTModelLabel.text = @"TModel:";
     
-    _mYellowLabel.hidden = YES;
-    _mYellowQuantityLabel.hidden = YES;
-    _mYellowStepper.hidden =YES;
+    _mMakeLabel.font = [UIFont systemFontOfSize:14];
+    _mModelLabel.font = [UIFont systemFontOfSize:14];
+    _mTModelLabel.font = [UIFont systemFontOfSize: 14];
     
-    _mMagentaLabel.hidden = YES;
-    _mMagentaQuantityLabel.hidden = YES;
-    _mMagentaStepper.hidden =YES;
+    _mMakeTextField.tag = 0;
+    _mModelTextField.tag = 1;
+    _mTModelTextField.tag = 2;
+
+    _mMakeTextField.placeholder = @"Enter Make";
+    _mModelTextField.placeholder = @"Enter Model";
+    _mTModelTextField.placeholder = @"Enter Toner Model";
     
     _mMakeTextField.autocapitalizationType = UITextAutocapitalizationTypeWords;
     _mModelTextField.autocapitalizationType = UITextAutocapitalizationTypeWords;
@@ -34,6 +38,23 @@
     _mMakeTextField.returnKeyType = UIReturnKeyDone;
     _mModelTextField.returnKeyType = UIReturnKeyDone;
     _mTModelTextField.returnKeyType = UIReturnKeyDone;
+    
+    _mColorPickerOptions = [[NSArray alloc]initWithObjects: @"BW", @"Color", nil];
+    
+    _mBlackQuantityLabel.text = @"Black:          0";
+    _mCyanQuantityLabel.text = @"Cyan:          0";
+    _mYellowQuantityLabel.text = @"Yellow:        0";
+    _mMagentaQuantityLabel.text = @"Magenta:    0";
+    
+    _mYellowQuantityLabel.hidden = YES;
+    _mCyanQuantityLabel.hidden = YES;
+    _mMagentaQuantityLabel.hidden = YES;
+    
+    _mCyanStepper.hidden = YES;
+    _mYellowStepper.hidden =YES;
+    _mMagentaStepper.hidden =YES;
+    
+    [_mSaveButton setTitle: @"Save" forState: normal];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -53,28 +74,20 @@
     _mColorSelected = _mColorPickerOptions[row];
     
     if(_mColorSelected == _mColorPickerOptions[1]){
-        _mCyanLabel.hidden = NO;
         _mCyanQuantityLabel.hidden = NO;
-        _mCyanStepper.hidden = NO;
-        
-        _mYellowLabel.hidden = NO;
         _mYellowQuantityLabel.hidden = NO;
-        _mYellowStepper.hidden =NO;
-        
-        _mMagentaLabel.hidden = NO;
         _mMagentaQuantityLabel.hidden = NO;
+        
+        _mCyanStepper.hidden = NO;
+        _mYellowStepper.hidden =NO;
         _mMagentaStepper.hidden =NO;
     }else{
-        _mCyanLabel.hidden = YES;
         _mCyanQuantityLabel.hidden = YES;
-        _mCyanStepper.hidden = YES;
-        
-        _mYellowLabel.hidden = YES;
         _mYellowQuantityLabel.hidden = YES;
-        _mYellowStepper.hidden =YES;
-        
-        _mMagentaLabel.hidden = YES;
         _mMagentaQuantityLabel.hidden = YES;
+        
+        _mCyanStepper.hidden = YES;
+        _mYellowStepper.hidden =YES;
         _mMagentaStepper.hidden =YES;
     }
 }
@@ -130,22 +143,22 @@
 
 - (IBAction)blackSteps:(UIStepper *)sender {
     double steps = [sender value];
-    [_MBlackQuantityLabel setText:[NSString stringWithFormat:@"%d", (int)steps]];
+    [_mBlackQuantityLabel setText:[NSString stringWithFormat:@"Black:          %d", (int)steps]];
 }
 
 - (IBAction)cyanSteps:(UIStepper *)sender {
     double steps = [sender value];
-    [_mCyanQuantityLabel setText:[NSString stringWithFormat:@"%d", (int)steps]];
+    [_mCyanQuantityLabel setText:[NSString stringWithFormat:@"Cyan:          %d", (int)steps]];
 }
 
 - (IBAction)yellowSteps:(UIStepper *)sender {
     double steps = [sender value];
-    [_mYellowQuantityLabel setText:[NSString stringWithFormat:@"%d", (int)steps]];
+    [_mYellowQuantityLabel setText:[NSString stringWithFormat:@"Yellow:        %d", (int)steps]];
 }
 
 - (IBAction)magentaSteps:(UIStepper *)sender {
     double steps = [sender value];
-    [_mMagentaQuantityLabel setText:[NSString stringWithFormat:@"%d", (int)steps]];
+    [_mMagentaQuantityLabel setText:[NSString stringWithFormat:@"Magenta:    %d", (int)steps]];
 }
 
 -(IBAction) addToner{

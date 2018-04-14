@@ -19,8 +19,6 @@
     _mEmptyListLabel.text = @"There are currently no toners available to show";
     [_mEmptyListLabel sizeToFit];
     
-    _mTonerTable.hidden = YES;
-    
     _mTonerList = [NSMutableArray array];
     
     [_mTonerTable setRowHeight: 50];
@@ -43,8 +41,6 @@
     
     [_mTonerList removeAllObjects];
     
-    NSLog(@"%@", _mTonerList.count);
-    
     _mTonerList = [_mDatabase getToners];
     [_mTonerTable reloadData];
     
@@ -53,13 +49,11 @@
 
 -(void)hideTable{
     if(_mTonerList.count == 0){
+        _mEmptyView.hidden = NO;
         _mTonerTable.hidden = YES;
-        _mEmptyListLabel.hidden = NO;
-        _mEmptyListImage.hidden = NO;
     }else{
+        _mEmptyView.hidden = YES;
         _mTonerTable.hidden = NO;
-        _mEmptyListLabel.hidden = YES;
-        _mEmptyListImage.hidden = YES;
     }
 }
 
@@ -74,9 +68,7 @@
     Toner *toner = _mTonerList[indexPath.row];
     
     cell.mIconImage.image = [UIImage imageNamed:@"ic_toner.png"];
-    
-    [cell.mMakeModelLabel setFont: [UIFont boldSystemFontOfSize: cell.mMakeModelLabel.font.pointSize]];
-    
+        
     cell.mMakeModelLabel.text = [NSString stringWithFormat:@"%@ %@", toner.make, toner.model];
     cell.mTModelLabel.text = [NSString stringWithFormat: @"Toner Model: %@", toner.tmodel];
     

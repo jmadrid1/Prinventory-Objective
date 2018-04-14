@@ -5,17 +5,18 @@
 @interface TonerAddVC : UIViewController<UITextFieldDelegate, UIPickerViewDataSource, UIPickerViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UIImageView *mIconImage;
+
+@property (weak, nonatomic) IBOutlet UILabel *mMakeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *mModelLabel;
+@property (weak, nonatomic) IBOutlet UILabel *mTModelLabel;
+
 @property (weak, nonatomic) IBOutlet UITextField *mMakeTextField;
 @property (weak, nonatomic) IBOutlet UITextField *mModelTextField;
 @property (weak, nonatomic) IBOutlet UITextField *mTModelTextField;
 
 @property (weak, nonatomic) IBOutlet UIPickerView *mColorPicker;
-@property (weak, nonatomic) IBOutlet UILabel *mBlackLabel;
-@property (weak, nonatomic) IBOutlet UILabel *mCyanLabel;
-@property (weak, nonatomic) IBOutlet UILabel *mYellowLabel;
-@property (weak, nonatomic) IBOutlet UILabel *mMagentaLabel;
 
-@property (weak, nonatomic) IBOutlet UILabel *MBlackQuantityLabel;
+@property (weak, nonatomic) IBOutlet UILabel *mBlackQuantityLabel;
 @property (weak, nonatomic) IBOutlet UILabel *mCyanQuantityLabel;
 @property (weak, nonatomic) IBOutlet UILabel *mYellowQuantityLabel;
 @property (weak, nonatomic) IBOutlet UILabel *mMagentaQuantityLabel;

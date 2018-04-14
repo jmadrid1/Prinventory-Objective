@@ -11,6 +11,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    _mIconImage.image = [UIImage imageNamed: @"ic_toner.png"];
+    
     _mMakeModelLabel.text = [NSString stringWithFormat: @"%@ %@", _mSelectedToner.make, _mSelectedToner.model];
     _mTModelLabel.text = [NSString stringWithFormat: @"Toner Model: %@", _mSelectedToner.tmodel];
     _mColorLabel.text = [NSString stringWithFormat: @"Color: %@", _mSelectedToner.color];
@@ -19,7 +21,21 @@
     _mYellowLabel.text = [NSString stringWithFormat: @"Yellow: %.f", _mSelectedToner.yellow];
     _mMagentaLabel.text = [NSString stringWithFormat: @"Magenta: %.f", _mSelectedToner.black];
     
-    [_mMakeModelLabel setFont: [UIFont boldSystemFontOfSize: _mMakeModelLabel.font.pointSize]];
+    _mMakeModelLabel.font = [UIFont boldSystemFontOfSize: 23];
+    _mTModelLabel.textColor = UIColor.lightGrayColor;
+    _mColorLabel.textColor = UIColor.lightGrayColor;
+    _mBlackLabel.textColor = UIColor.lightGrayColor;
+    _mCyanLabel.textColor = UIColor.lightGrayColor;
+    _mYellowLabel.textColor = UIColor.lightGrayColor;
+    _mMagentaLabel.textColor = UIColor.lightGrayColor;
+ 
+    _mMakeModelLabel.font = [UIFont boldSystemFontOfSize:23];
+    _mTModelLabel.font = [UIFont systemFontOfSize: 16];
+    _mColorLabel.font = [UIFont systemFontOfSize: 16];
+    _mBlackLabel.font = [UIFont systemFontOfSize: 16];
+    _mCyanLabel.font = [UIFont systemFontOfSize: 16];
+    _mYellowLabel.font = [UIFont systemFontOfSize: 16];
+    _mMagentaLabel.font = [UIFont systemFontOfSize: 16];
     
     [_mMakeModelLabel sizeToFit];
     [_mTModelLabel sizeToFit];

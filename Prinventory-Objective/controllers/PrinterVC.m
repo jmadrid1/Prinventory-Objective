@@ -16,15 +16,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    _mDatabase = [[Database alloc]init];
+    
     _mEmptyListImage.image = [UIImage imageNamed:@"ic_list_empty.png"];
     _mEmptyListLabel.text = @"There are currently no printers available to show";
     [_mEmptyListLabel sizeToFit];
     
-    _mPrinterTable.hidden = YES;
-    
     _mPrinterList = [NSMutableArray array];
-
-    _mDatabase = [[Database alloc]init];
 
     [_mPrinterTable setRowHeight: 50];
     [_mPrinterTable reloadData];
@@ -54,13 +52,11 @@
 
 -(void)hideTable{
     if(_mPrinterList.count == 0){
+        _mEmptyView.hidden = NO;
         _mPrinterTable.hidden = YES;
-        _mEmptyListLabel.hidden = NO;
-        _mEmptyListImage.hidden = NO;
     }else{
+         _mEmptyView.hidden = YES;
         _mPrinterTable.hidden = NO;
-        _mEmptyListLabel.hidden = YES;
-        _mEmptyListImage.hidden = YES;
     }
 }
 
@@ -75,8 +71,6 @@
     Printer *printer = _mPrinterList[indexPath.row];
     
     cell.mIconImage.image = [UIImage imageNamed:@"ic_printer.png"];
-    
-    [cell.mMakeModelLabel setFont: [UIFont boldSystemFontOfSize: cell.mMakeModelLabel.font.pointSize]];
     
     cell.mMakeModelLabel.text = [NSString stringWithFormat: @"%@ %@", printer.make, printer.model];
     cell.mLocationLabel.text = [NSString stringWithFormat: @"Location: %@", printer.location];

@@ -12,22 +12,44 @@
     [super viewDidLoad];
     
     _mDatabase = [[Database alloc] init];
- 
-    _mStatePickerOptions = [[NSArray alloc]initWithObjects: @"AK", @"AL", @"AR", @"AS", @"AZ",@"CA", @"CO", @"CT", @"DC", @"DE", @"FL",
-                            @"GA", @"GU", @"HI", @"IA", @"ID", @"IL", @"IN", @"KS", @"KY", @"LA", @"MA",
-                            @"MD", @"ME", @"MI", @"MN", @"MO", @"MS", @"MT", @"NC", @"ND", @"NE", @"NH",
-                            @"NJ", @"NM", @"NV", @"NY", @"OH", @"OK", @"OR", @"PA", @"PR", @"RI", @"SC",
-                            @"SD", @"TN", @"TX", @"UT", @"VA", @"VI", @"VT", @"WA", @"WI", @"WV", @"WY", nil];
     
-    NSString *currentState = _mSelectedVendor.state;
-    _mStateIndex = [_mStatePickerOptions indexOfObject: currentState];
+    _mIconImage.image = [UIImage imageNamed: @"ic_vendor.png"];
+
+    _mNameLabel.text = @"Name:";
+    _mPhoneLabel.text = @"Phone:";
+    _mEmailLabel.text = @"Email:";
+    _mStreetLabel.text = @"Street:";
+    _mCityLabel.text = @"City:";
+    _mStateLabel.text = @"State";
+    _mZipcodeLabel.text = @"Zipcode";
+    
+    _mNameLabel.font = [UIFont systemFontOfSize:14];
+    _mPhoneLabel.font = [UIFont systemFontOfSize:14];
+    _mEmailLabel.font = [UIFont systemFontOfSize: 14];
+    _mStreetLabel.font = [UIFont systemFontOfSize:14];
+    _mCityLabel.font = [UIFont systemFontOfSize:14];
+    _mStateLabel.font = [UIFont systemFontOfSize: 14];
+    _mZipcodeLabel.font = [UIFont systemFontOfSize:14];
+    
+    _mNameTextField.tag = 0;
+    _mPhoneTextField.tag = 1;
+    _mEmailTextField.tag = 2;
+    _mStreetTextField.tag = 3;
+    _mCityTextField.tag = 4;
+    _mZipcodeTextField.tag = 5;
+    
+    _mNameTextField.placeholder = @"Enter Name";
+    _mPhoneTextField.placeholder = @"XXX-XXX-XXXX";
+    _mEmailTextField.placeholder = @"Enter Email";
+    _mStreetTextField.placeholder = @"Enter Street";
+    _mCityTextField.placeholder = @"Enter City";
+    _mZipcodeTextField.placeholder = @"Enter Zipcode";
     
     _mNameTextField.text = _mSelectedVendor.name;
     _mPhoneTextField.text = _mSelectedVendor.phone;
     _mEmailTextField.text = _mSelectedVendor.email;
     _mCityTextField.text = _mSelectedVendor.city;
     _mStreetTextField.text = _mSelectedVendor.street;
-    [_mStatePicker selectRow: _mStateIndex inComponent: 0 animated: TRUE];
     _mZipcodeTextField.text = _mSelectedVendor.zipcode;
     
     _mNameTextField.autocapitalizationType = UITextAutocapitalizationTypeWords;
@@ -39,11 +61,23 @@
     _mEmailTextField.returnKeyType = UIReturnKeyDone;
     _mCityTextField.returnKeyType = UIReturnKeyDone;
     _mStreetTextField.returnKeyType = UIReturnKeyDone;
-
     _mPhoneTextField.keyboardType = UIKeyboardTypeNumberPad;
     _mZipcodeTextField.keyboardType = UIKeyboardTypeNumberPad;
     
     [self addDoneButtonsToFields];
+    
+    [_mStatePicker selectRow: _mStateIndex inComponent: 0 animated: TRUE];
+    
+    _mStatePickerOptions = [[NSArray alloc]initWithObjects: @"AK", @"AL", @"AR", @"AS", @"AZ",@"CA", @"CO", @"CT", @"DC", @"DE", @"FL",
+                            @"GA", @"GU", @"HI", @"IA", @"ID", @"IL", @"IN", @"KS", @"KY", @"LA", @"MA",
+                            @"MD", @"ME", @"MI", @"MN", @"MO", @"MS", @"MT", @"NC", @"ND", @"NE", @"NH",
+                            @"NJ", @"NM", @"NV", @"NY", @"OH", @"OK", @"OR", @"PA", @"PR", @"RI", @"SC",
+                            @"SD", @"TN", @"TX", @"UT", @"VA", @"VI", @"VT", @"WA", @"WI", @"WV", @"WY", nil];
+    
+    NSString *currentState = _mSelectedVendor.state;
+    _mStateIndex = [_mStatePickerOptions indexOfObject: currentState];
+    
+    [_mSaveButton setTitle: @"Save Changes" forState: normal];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -18,9 +18,7 @@
     _mEmptyListImage.image = [UIImage imageNamed:@"ic_list_empty.png"];
     _mEmptyListLabel.text = @"There are currently no vendors available to show";
     [_mEmptyListLabel sizeToFit];
-    
-    _mVendorTable.hidden = YES;
-    
+
     _mVendorList = [NSMutableArray array];
     
     [_mVendorTable setRowHeight: 50];
@@ -50,13 +48,11 @@
 
 -(void)hideTable{
     if(_mVendorList.count == 0){
+        _mEmptyView.hidden = NO;
         _mVendorTable.hidden = YES;
-        _mEmptyListLabel.hidden = NO;
-        _mEmptyListImage.hidden = NO;
     }else{
+        _mEmptyView.hidden = YES;
         _mVendorTable.hidden = NO;
-        _mEmptyListLabel.hidden = YES;
-        _mEmptyListImage.hidden = YES;
     }
 }
 
@@ -71,9 +67,7 @@
     Vendor *vendor = _mVendorList[indexPath.row];
     
     cell.mIconImage.image = [UIImage imageNamed:@"ic_vendor.png"];
-    
-    [cell.mNameLabel setFont: [UIFont boldSystemFontOfSize: cell.mNameLabel.font.pointSize]];
-    
+
     cell.mNameLabel.text = vendor.name;
     cell.mPhoneLabel.text = [NSString stringWithFormat: @"Phone: %@", vendor.phone];
     cell.mEmailLabel.text = [NSString stringWithFormat: @"Email: %@", vendor.email];

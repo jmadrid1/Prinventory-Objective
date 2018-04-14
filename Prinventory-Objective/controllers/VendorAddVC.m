@@ -13,12 +13,38 @@
     
     _mDatabase = [[Database alloc]init];
     
-    _mStatePickerOptions = [[NSArray alloc]initWithObjects: @"AK", @"AL", @"AR", @"AS", @"AZ",@"CA", @"CO", @"CT", @"DC", @"DE", @"FL",
-                            @"GA", @"GU", @"HI", @"IA", @"ID", @"IL", @"IN", @"KS", @"KY", @"LA", @"MA",
-                            @"MD", @"ME", @"MI", @"MN", @"MO", @"MS", @"MT", @"NC", @"ND", @"NE", @"NH",
-                            @"NJ", @"NM", @"NV", @"NY", @"OH", @"OK", @"OR", @"PA", @"PR", @"RI", @"SC",
-                            @"SD", @"TN", @"TX", @"UT", @"VA", @"VI", @"VT", @"WA", @"WI", @"WV", @"WY", nil];
-   
+    _mIconImage.image = [UIImage imageNamed: @"ic_vendor.png"];
+    
+    _mNameLabel.text = @"Name:";
+    _mPhoneLabel.text = @"Phone:";
+    _mEmailLabel.text = @"Email:";
+    _mStreetLabel.text = @"Street:";
+    _mCityLabel.text = @"City:";
+    _mStateLabel.text = @"State";
+    _mZipcodeLabel.text = @"Zipcode";
+    
+    _mNameLabel.font = [UIFont systemFontOfSize:14];
+    _mPhoneLabel.font = [UIFont systemFontOfSize:14];
+    _mEmailLabel.font = [UIFont systemFontOfSize: 14];
+    _mStreetLabel.font = [UIFont systemFontOfSize:14];
+    _mCityLabel.font = [UIFont systemFontOfSize:14];
+    _mStateLabel.font = [UIFont systemFontOfSize: 14];
+    _mZipcodeLabel.font = [UIFont systemFontOfSize:14];
+    
+    _mNameTextField.tag = 0;
+    _mPhoneTextField.tag = 1;
+    _mEmailTextField.tag = 2;
+    _mStreetTextField.tag = 3;
+    _mCityTextField.tag = 4;
+    _mZipcodeTextField.tag = 5;
+    
+    _mNameTextField.placeholder = @"Enter Name";
+    _mPhoneTextField.placeholder = @"XXX-XXX-XXXX";
+    _mEmailTextField.placeholder = @"Enter Email";
+    _mStreetTextField.placeholder = @"Enter Street";
+    _mCityTextField.placeholder = @"Enter City";
+    _mZipcodeTextField.placeholder = @"Enter Zipcode";
+    
     _mNameTextField.autocapitalizationType = UITextAutocapitalizationTypeWords;
     _mEmailTextField.autocapitalizationType = UITextAutocapitalizationTypeWords;
     _mCityTextField.autocapitalizationType = UITextAutocapitalizationTypeWords;
@@ -31,6 +57,14 @@
     _mZipcodeTextField.keyboardType = UIKeyboardTypeNumberPad;
     
     [self addDoneButtonsToFields];
+    
+    _mStatePickerOptions = [[NSArray alloc]initWithObjects: @"AK", @"AL", @"AR", @"AS", @"AZ",@"CA", @"CO", @"CT", @"DC", @"DE", @"FL",
+                            @"GA", @"GU", @"HI", @"IA", @"ID", @"IL", @"IN", @"KS", @"KY", @"LA", @"MA",
+                            @"MD", @"ME", @"MI", @"MN", @"MO", @"MS", @"MT", @"NC", @"ND", @"NE", @"NH",
+                            @"NJ", @"NM", @"NV", @"NY", @"OH", @"OK", @"OR", @"PA", @"PR", @"RI", @"SC",
+                            @"SD", @"TN", @"TX", @"UT", @"VA", @"VI", @"VT", @"WA", @"WI", @"WV", @"WY", nil];
+   
+    [_mSaveButton setTitle: @"Save" forState: normal];
 }
 
 - (void)didReceiveMemoryWarning {

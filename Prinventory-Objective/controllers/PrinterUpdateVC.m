@@ -14,21 +14,54 @@
     
     _mDatabase = [[Database alloc]init];
     
-    _mStatusPickerOptions = [[NSArray alloc]initWithObjects: @"Inactive", @"Active", nil];
-    _mColorPickerOptions = [[NSArray alloc]initWithObjects: @"BW", @"Color", nil];
+    _mIconImage.image = [UIImage imageNamed: @"ic_printer.png"];
     
-    NSString *currentStatus = _mSelectedPrinter.status;
-    _mStatusIndex = [_mStatusPickerOptions indexOfObject: currentStatus];
+    _mMakeLabel.text = @"Make:";
+    _mTModelLabel.text = @"TModel:";
+    _mSerialLabel.text = @"Serial:";
+    _mStatusLabel.text = @"Status:";
+    _mColorLabel.text = @"Color:";
+    _mOwnerLabel.text = @"Owner:";
+    _mDeptLabel.text = @"Department:";
+    _mLocationLabel.text = @"Location:";
+    _mFloorLabel.text = @"Floor:";
+    _mIpLabel.text = @"IP:";
     
-    NSString *currentColor = _mSelectedPrinter.color;
-    _mColorIndex = [_mColorPickerOptions indexOfObject: currentColor];
+    _mMakeLabel.font = [UIFont systemFontOfSize:14];
+    _mTModelLabel.font = [UIFont systemFontOfSize: 14];
+    _mSerialLabel.font = [UIFont systemFontOfSize: 14];
+    _mStatusLabel.font = [UIFont systemFontOfSize: 14];
+    _mColorLabel.font = [UIFont systemFontOfSize: 14];
+    _mOwnerLabel.font = [UIFont systemFontOfSize: 14];
+    _mDeptLabel.font = [UIFont systemFontOfSize: 14];
+    _mLocationLabel.font = [UIFont systemFontOfSize: 14];
+    _mFloorLabel.font = [UIFont systemFontOfSize: 14];
+    _mIpLabel.font = [UIFont systemFontOfSize: 14];
+    
+    _mMakeTextField.tag = 0;
+    _mModelTextField.tag = 1;
+    _mTModelTextField.tag = 2;
+    _mSerialTextField.tag = 3;
+    _mOwnerTextField.tag = 4;
+    _mDeptTextField.tag = 5;
+    _mLocationTextField.tag = 6;
+    _mFloorTextField.tag = 7;
+    _mIpTextField.tag = 8;
+    
+    _mMakeTextField.placeholder = @"Enter Make";
+    _mModelTextField.placeholder = @"Enter Model";
+    _mTModelTextField.placeholder = @"Enter Toner Model";
+    _mSerialTextField.placeholder = @"Enter Serial";
+    _mOwnerTextField.placeholder = @"Enter Owner";
+    _mDeptTextField.placeholder = @"Enter Department";
+    _mLocationTextField.placeholder = @"Enter Location";
+    _mFloorTextField.placeholder = @"Enter Floor";
+    _mIpTextField.placeholder = @"Enter IP";
     
     _mMakeTextField.text = _mSelectedPrinter.make;
     _mModelTextField.text = _mSelectedPrinter.model;
     _mTModelTextField.text = _mSelectedPrinter.tmodel;
     _mSerialTextField.text = _mSelectedPrinter.serial;
-    [_mStatusPicker selectRow: _mStatusIndex inComponent: 0 animated: true];
-    [_mColorPicker selectRow: _mColorIndex inComponent: 0 animated: true];
     _mOwnerTextField.text = _mSelectedPrinter.owner;
     _mDeptTextField.text = _mSelectedPrinter.dept;
     _mLocationTextField.text = _mSelectedPrinter.location;
@@ -55,6 +88,20 @@
     _mIpTextField.keyboardType = UIKeyboardTypeNumberPad;
     
     [self addDoneButton];
+    
+    _mStatusPickerOptions = [[NSArray alloc]initWithObjects: @"Inactive", @"Active", nil];
+    _mColorPickerOptions = [[NSArray alloc]initWithObjects: @"BW", @"Color", nil];
+    
+    NSString *currentStatus = _mSelectedPrinter.status;
+    _mStatusIndex = [_mStatusPickerOptions indexOfObject: currentStatus];
+    
+    NSString *currentColor = _mSelectedPrinter.color;
+    _mColorIndex = [_mColorPickerOptions indexOfObject: currentColor];
+    
+    [_mStatusPicker selectRow: _mStatusIndex inComponent: 0 animated: true];
+    [_mColorPicker selectRow: _mColorIndex inComponent: 0 animated: true];
+    
+    [_mSaveButton setTitle: @"Save Changes" forState: normal];
 }
 
 - (void)didReceiveMemoryWarning {
