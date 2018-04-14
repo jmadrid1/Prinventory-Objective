@@ -133,6 +133,9 @@
     }
 }
 
+/**
+ Limits the amount of characters for the specified TextFields and makes specific Textfields input strictly numeric
+ */
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string{
     
     if(range.length + range.location > textField.text.length){
@@ -224,6 +227,9 @@
     }
 }
 
+/**
+ Attaches a "Done" UIBarButtonItem to TextFields that are strictly numeric
+ */
 - (void)addDoneButton {
     UIToolbar* keyboardToolbar = [[UIToolbar alloc] init];
     [keyboardToolbar sizeToFit];
@@ -237,6 +243,9 @@
     _mIpTextField.inputAccessoryView = keyboardToolbar;
 }
 
+/**
+ Saves printer to the SQLite Database based off of values from TextFields and UIPickerViews.
+ */
 - (IBAction) addPrinter {
     
     NSString *make = _mMakeTextField.text;

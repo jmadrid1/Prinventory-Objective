@@ -161,6 +161,9 @@
     [_mMagentaQuantityLabel setText:[NSString stringWithFormat:@"Magenta:    %d", (int)steps]];
 }
 
+/**
+ Saves toner to the SQLite Database based off of values from TextFields, UIPickerView & UISteppers.
+ */
 -(IBAction) addToner{
     
     NSString *make = _mMakeTextField.text;

@@ -68,13 +68,15 @@
     [_mLocationLabel sizeToFit];
     [_mFloorLabel sizeToFit];
     [_mIpLabel sizeToFit];
-   
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
 
+/**
+ Passes Printer object to PrinterUpdateVC
+ */
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     if([segue.identifier isEqualToString:@"printerUpdateSegue"]){
         PrinterUpdateVC *vc = segue.destinationViewController;

@@ -177,6 +177,9 @@
     [_mMagentaQuantityLabel sizeToFit];
 }
 
+/**
+ Updates toner information on SQLite Database based off of values from TextFields.
+ */
 -(IBAction) updateToner{
     
     NSString *make = _mMakeTextField.text;

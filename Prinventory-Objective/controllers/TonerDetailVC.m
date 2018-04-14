@@ -50,6 +50,9 @@
     [super didReceiveMemoryWarning];
 }
 
+/**
+ Passes Toner object to PrinterUpdateVC
+ */
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     if([segue.identifier isEqualToString:@"tonerUpdateSegue"]){
         TonerUpdateVC *vc = segue.destinationViewController;

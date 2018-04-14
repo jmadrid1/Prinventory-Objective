@@ -49,6 +49,9 @@
     [super didReceiveMemoryWarning];
 }
 
+/**
+ Passes Vendor object to PrinterUpdateVC
+ */
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     if([segue.identifier isEqualToString:@"vendorUpdateSegue"]){
         VendorUpdateVC *vc = segue.destinationViewController;

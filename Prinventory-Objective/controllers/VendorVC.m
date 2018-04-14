@@ -46,6 +46,9 @@
     [self hideTable];
 }
 
+/**
+ Hides TableView if list does not contain any vendors and shows "Empty List" comment
+ */
 -(void)hideTable{
     if(_mVendorList.count == 0){
         _mEmptyView.hidden = NO;
@@ -106,6 +109,9 @@
     [self hideTable];
 }
 
+/**
+ Passes the selected vendor object from TableView row to the PrinterDetailVC
+ */
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     if([segue.identifier isEqualToString:@"vendorDetailSegue"]){
         VendorDetailVC *vc = segue.destinationViewController;

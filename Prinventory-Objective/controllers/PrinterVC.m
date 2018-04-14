@@ -50,6 +50,9 @@
     [self hideTable];
 }
 
+/**
+ Hides TableView if list does not contain any printers and shows "Empty List" comment
+ */
 -(void)hideTable{
     if(_mPrinterList.count == 0){
         _mEmptyView.hidden = NO;
@@ -120,8 +123,10 @@
     [self hideTable];
 }
 
+/**
+ Passes the selected printer object from TableView row to the PrinterDetailVC
+ */
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-
     if([segue.identifier isEqualToString:@"printerDetailSegue"]){
         PrinterDetailVC *vc = segue.destinationViewController;
         vc.mSelectedPrinter = (Printer *) sender;

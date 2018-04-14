@@ -47,6 +47,9 @@
     [self hideTable];
 }
 
+/**
+ Hides TableView if list does not contain any toners and shows "Empty List" comment
+ */
 -(void)hideTable{
     if(_mTonerList.count == 0){
         _mEmptyView.hidden = NO;
@@ -109,6 +112,10 @@
     [self hideTable];
 }
 
+
+/**
+ Passes the selected toner object from TableView row to the PrinterDetailVC
+ */
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     if([segue.identifier isEqualToString:@"tonerDetailSegue"]){
         TonerDetailVC *vc = segue.destinationViewController;
