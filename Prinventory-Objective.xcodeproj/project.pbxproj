@@ -31,6 +31,7 @@
 		2E649E6C204F73800067F3D9 /* VendorAddVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E649E6B204F73800067F3D9 /* VendorAddVC.m */; };
 		2E649E6F204F73920067F3D9 /* VendorUpdateVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E649E6E204F73920067F3D9 /* VendorUpdateVC.m */; };
 		2EF0F49D2055AD7600BDCD32 /* Database.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EF0F49C2055AD7600BDCD32 /* Database.m */; };
+		93FCD9BA8662243CBACD582C /* libPods-Prinventory-Objective.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EC0586B7A0C380A0B7F076F5 /* libPods-Prinventory-Objective.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +81,9 @@
 		2E649E6E204F73920067F3D9 /* VendorUpdateVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VendorUpdateVC.m; sourceTree = "<group>"; };
 		2EF0F49B2055AD7600BDCD32 /* Database.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Database.h; sourceTree = "<group>"; };
 		2EF0F49C2055AD7600BDCD32 /* Database.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Database.m; sourceTree = "<group>"; };
+		867C9B7720CE27163DF1D05B /* Pods-Prinventory-Objective.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Prinventory-Objective.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Prinventory-Objective/Pods-Prinventory-Objective.debug.xcconfig"; sourceTree = "<group>"; };
+		A98F0ECEBD335F89A01B9C75 /* Pods-Prinventory-Objective.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Prinventory-Objective.release.xcconfig"; path = "Pods/Target Support Files/Pods-Prinventory-Objective/Pods-Prinventory-Objective.release.xcconfig"; sourceTree = "<group>"; };
+		EC0586B7A0C380A0B7F076F5 /* libPods-Prinventory-Objective.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Prinventory-Objective.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93FCD9BA8662243CBACD582C /* libPods-Prinventory-Objective.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,6 +103,8 @@
 			children = (
 				2E649E23204F21E80067F3D9 /* Prinventory-Objective */,
 				2E649E22204F21E80067F3D9 /* Products */,
+				F08087835E43826813F0DA48 /* Pods */,
+				A6DA65278A04F1439CF0BE10 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -193,6 +200,23 @@
 			path = database;
 			sourceTree = "<group>";
 		};
+		A6DA65278A04F1439CF0BE10 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EC0586B7A0C380A0B7F076F5 /* libPods-Prinventory-Objective.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F08087835E43826813F0DA48 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				867C9B7720CE27163DF1D05B /* Pods-Prinventory-Objective.debug.xcconfig */,
+				A98F0ECEBD335F89A01B9C75 /* Pods-Prinventory-Objective.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -200,9 +224,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2E649E37204F21E80067F3D9 /* Build configuration list for PBXNativeTarget "Prinventory-Objective" */;
 			buildPhases = (
+				3E74536B5B0FC57D329AC16A /* [CP] Check Pods Manifest.lock */,
 				2E649E1D204F21E70067F3D9 /* Sources */,
 				2E649E1E204F21E70067F3D9 /* Frameworks */,
 				2E649E1F204F21E70067F3D9 /* Resources */,
+				1DCE7611F51CF0C99143E93F /* [CP] Embed Pods Frameworks */,
+				6215321795DF05892512DF3B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -258,6 +285,57 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1DCE7611F51CF0C99143E93F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Prinventory-Objective/Pods-Prinventory-Objective-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3E74536B5B0FC57D329AC16A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Prinventory-Objective-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6215321795DF05892512DF3B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Prinventory-Objective/Pods-Prinventory-Objective-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2E649E1D204F21E70067F3D9 /* Sources */ = {
@@ -408,6 +486,7 @@
 		};
 		2E649E38204F21E80067F3D9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 867C9B7720CE27163DF1D05B /* Pods-Prinventory-Objective.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -422,6 +501,7 @@
 		};
 		2E649E39204F21E80067F3D9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A98F0ECEBD335F89A01B9C75 /* Pods-Prinventory-Objective.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

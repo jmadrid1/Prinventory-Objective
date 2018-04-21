@@ -418,7 +418,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ic_printer" translatesAutoresizingMaskIntoConstraints="NO" id="39f-5k-Pb5">
-                                <rect key="frame" x="16" y="151" width="120" height="113"/>
+                                <rect key="frame" x="16" y="151" width="104" height="102"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Make:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bxj-WW-HHb">
@@ -499,7 +499,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Make" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="X4l-Xx-wgF">
-                                <rect key="frame" x="202" y="108" width="161" height="30"/>
+                                <rect key="frame" x="202" y="108" width="174" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -509,7 +509,7 @@
                                 </connections>
                             </textField>
                             <textField opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Model" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="La7-Sd-SeG">
-                                <rect key="frame" x="202" y="144" width="161" height="30"/>
+                                <rect key="frame" x="202" y="144" width="174" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -617,7 +617,6 @@
                         <viewLayoutGuide key="safeArea" id="MwC-97-FZV"/>
                     </view>
                     <connections>
-                        <outlet property="_mStatusPicker" destination="cuL-l8-qE3" id="Wfo-dA-liM"/>
                         <outlet property="mColorLabel" destination="JrD-81-Hv9" id="A6l-mx-T9b"/>
                         <outlet property="mColorPicker" destination="nnw-bm-62T" id="Sws-qo-Sik"/>
                         <outlet property="mDeptLabel" destination="Pfo-tf-ILJ" id="RUE-8I-5oQ"/>
@@ -639,6 +638,7 @@
                         <outlet property="mSerialLabel" destination="9EG-Gi-Ksj" id="BGD-oc-fwb"/>
                         <outlet property="mSerialTextField" destination="0cF-zP-55g" id="c9F-at-rG1"/>
                         <outlet property="mStatusLabel" destination="5Dj-0P-ZYw" id="rdZ-CZ-2yR"/>
+                        <outlet property="mStatusPicker" destination="cuL-l8-qE3" id="axn-Sc-IHL"/>
                         <outlet property="mTModelLabel" destination="h1b-0a-lZk" id="bYs-WX-GhA"/>
                         <outlet property="mTModelTextField" destination="55g-UF-qCq" id="pjj-At-boC"/>
                     </connections>

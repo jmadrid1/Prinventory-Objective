@@ -30,7 +30,7 @@
 
 @property (weak, nonatomic) IBOutlet UIButton *mSaveButton;
 
-@property (weak, nonatomic) IBOutlet UIPickerView *_mStatusPicker;
+@property (weak, nonatomic) IBOutlet UIPickerView *mStatusPicker;
 @property (weak, nonatomic) IBOutlet UIPickerView *mColorPicker;
 
 
